@@ -191,7 +191,7 @@ body {
 }
 
 .main1 {
-    padding-top: calc(var(--nice-padding) + 2rem);
+    padding-top: 4rem;
     display:flex;
     width: 100%;
     align-self: center;
@@ -206,7 +206,8 @@ body {
 }
 
 .main1_logo_a {
-    margin-bottom: var(--nice-padding);
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     cursor: default;
 }
 
@@ -216,10 +217,10 @@ body {
     margin-left:auto;
     margin-right: auto;
     transition: all .5s;
-    max-width: 40rem;
+    max-width: 60rem;
 }
 .main1_logo:hover {
-    transform: scale(1.05)
+    transform: scale(1.1)
 }
 
 .main1_description {
@@ -236,9 +237,10 @@ body {
 }
 
 .main1_ipcopier {
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    margin-top: -1.7rem;
+    padding: 0.7rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
     font-size: 2rem;
     background-color: var(--accent2_transp);
     border: 0px;
@@ -273,9 +275,9 @@ body {
     color: #fff;
     border-radius: var(--roundness);
     z-index: 9999;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-top: -10.5rem;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    margin-top: -10.8rem;
 }
 
 .main1_downarrow {
@@ -364,7 +366,7 @@ body {
 
 
 .main4 {
-    min-height: 10rem;
+    min-height: 15rem;
     width:100%;
     display: flex;
     justify-content: center;
@@ -377,8 +379,15 @@ body {
     border: 0;
 }
 
+.main4_dc_widget_img{
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
 .main4_dc_div {
-    margin: 2rem;
+    margin: 2.5rem;
     display: flex;
     flex-direction: row;
     background-color: var(--background2);
@@ -394,17 +403,17 @@ body {
 .main4_dc_description_title {
     margin: 2rem;
     text-align: center;
-    font-size:1.5rem;
+    font-size:1.7rem;
     font-weight: 700;
 
 }
 
 
 .main4_dc_description {
-    margin-left:1.5rem;
-    margin-right:1.5rem;
-    margin-bottom:1.5rem;
-    font-size:1.2rem;
+    margin-left:4rem;
+    margin-right:4rem;
+    margin-bottom:2rem;
+    font-size:1.5rem;
 }
 .main4_dc_button_a{
     text-decoration: none;
@@ -644,7 +653,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size:1.4rem;
+    font-size:1.2rem;
     line-height: 1.5;
     border-left: 3px solid var(--background2);
     padding-left: .75rem;
@@ -674,6 +683,61 @@ body {
 
 
 
+@media only screen and (max-width: 800px) {
+    .desktop_navbar{
+        display:none;
+    }
+    .mobile_navbar{
+        display:flex;
+    }
+    .headline {
+        font-size:1.9rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .main1_logo {
+        max-width: 45rem;
+    }
+    .main1_description {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .main1_ipcopier {
+        display: none;
+    }
+    .main5_admins_img {
+        align-self: center;
+        padding-top: 1rem;
+    }
+    .main5_admins_div{
+        flex-direction: column;
+        min-height: 0;
+    }
+    .main5_admins_description_div {
+        max-width: 100%;
+        padding: 2rem;
+    }
+    .main4_dc_div {
+        flex-direction: column;
+    }
+    .main4_dc_widget {
+        height: 20rem;
+        width: 100%;
+    }
+    .main3_join_div {
+        min-width: 20rem;
+        min-height: 9rem;
+    }
+    .main3_join_content_div {
+        padding:1rem;
+    }
+    .main5_admins_dev_type1 {
+        padding-right: 0;
+    }
+    .main5_admins_dev_type2 {
+        padding-left: 0;
+    }
+}
 @media only screen and (max-width: 600px) {
     .desktop_navbar{
         display:none;
@@ -687,11 +751,11 @@ body {
         margin-left: 1rem;
     }
     .main1_logo {
-        max-width: 16rem;
+        max-width: 30rem;
     }
     .main1_description {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
     }
     .main1_ipcopier {
         display: none;
@@ -737,7 +801,7 @@ body {
         font-size:1rem;
     }
     .main3_join_div {
-        min-width: 10rem;
+        min-width: 8rem;
         padding: .5rem;
     }
     .main3_join_div_div {

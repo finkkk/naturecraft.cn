@@ -84,7 +84,7 @@ body {
 }
 
 .desktop_navbar_logo_img {
-    width: 5rem;
+    width: 3rem;
     padding-left: 2rem;
     padding-right: 1rem;
 }
@@ -139,9 +139,9 @@ body {
 .mobile_navbar_logo_img {
     position: absolute;
     display: block;
-    height: 42px;
+    height:32px;
     padding-left: .5rem;
-    top: 0;
+    top: 0.3rem;
     left: 0;
     padding-top: 3.5px;
 }

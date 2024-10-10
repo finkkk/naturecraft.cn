@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -145,6 +144,13 @@ section .title::after{
     font-size: 35px;
     font-weight: 600;
 }
+.navbar .logo img{
+    color: #fff;
+    max-width: 40px;
+    margin-bottom: -8px;
+    margin-right: 20px;
+    
+}
 .navbar .logo a span{
     color: yellowgreen;
     transition: all 0.3s ease;
@@ -218,47 +224,61 @@ section .title::after{
     background-attachment: fixed;
     font-family: 'Ubuntu', sans-serif;
 }
-.home .max-width{
-  width: 100%;
-  display: flex;
+.home_logo_a {
+    cursor: default;
 }
-.home .max-width .row{
-  margin-right: 0;
+
+.home_logo {
+    display: flex;
+    align-self: center;
+    transition: all .5s;
+    max-width: 300px;
 }
-.home .home-content .text-1{
-    font-size: 25px;
+.home_logo:hover {
+    transform: scale(1.05)
 }
-.home .home-content .text-2{
-    font-size: 55px;
-    font-weight: 600;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: -3px;
+
+.home_description {
+    text-align: center;
+    font-size:30px;
 }
-.home .home-content .text-3{
-    font-size: 40px;
-    margin: 5px 0;
+
+.home_actcent {
+    font-weight: 800;
+    color:#111;
 }
-.home .home-content .text-3 span{
-    color: crimson;
-    font-weight: 500;
+
+.home_button {
+    padding: 12px;
+    padding-left: 22px;
+    padding-right: 22px;
+    font-size: 20px;
+    background-color: green;
+    border: 0px;
+    border-radius: 15px;
+    color: white;
+    transition: all .5s;
+    cursor:pointer;
+    position: relative;
 }
-.home .home-content a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 25px;
-    padding: 12px 36px;
-    margin-top: 20px;
-    font-weight: 400;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
+
+.home_button:hover {
+    background-color: rgb(64, 200, 44);
+    transform: scale(1.1)
 }
-.home .home-content a:hover{
-    color: crimson;
-    background: none;
+.home_downarrow {
+    opacity: 50%;
+    height: 40px;
+    padding:10px;
+    transition: all .5s;
 }
+
+.home_downarrow:hover {
+    opacity: 100%;
+    transform: scale(1.05)
+}
+
+
 
 /* about section styling */
 .about .title::after{
@@ -307,7 +327,7 @@ section .title::after{
 /* services section styling */
 .services, .teams{
     color:#fff;
-background-image: url(/img/bg.png);
+background-image: url("/img/bg.png");
 }
 .services .title::before,
 .teams .title::before{
@@ -643,10 +663,10 @@ footer span a:hover{
         font-size: 25px;
     }
     .home .home-content .text-2{
-        font-size: 70px;
+        font-size: 50px;
     }
     .home .home-content .text-3{
-        font-size: 35px;
+        font-size: 28px;
     }
     .home .home-content a{
         font-size: 23px;
@@ -682,10 +702,10 @@ footer span a:hover{
         padding: 0 23px;
     }
     .home .home-content .text-2{
-        font-size: 50px;
+        font-size: 40px;
     }
     .home .home-content .text-3{
-        font-size: 28px;
+        font-size: 22px;
     }
     .home .home-content a{
         font-size: 20px;
@@ -697,10 +717,10 @@ footer span a:hover{
 
 @media (max-width: 500px) {
     .home .home-content .text-2{
-        font-size: 40px;
+        font-size: 30px;
     }
     .home .home-content .text-3{
-        font-size: 22px;
+        font-size: 18px;
     }
     .about .about-content .right .text,
     .skills .skills-content .left .text{

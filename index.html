@@ -1,293 +1,196 @@
 <!DOCTYPE html>
-<html lang="ZH">
-  <head>
+<html lang="cn">
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【NatureCraft】 欢迎您！</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="css/indexStyle.css">
-    <link rel="stylesheet" href="css/navmenu.css">
-    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>欢迎来到 NatureCraft</title>
+    <link rel="stylesheet" href="/naturecraft.cn/css/indexStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 </head>
 <body>
-
-
-
-  <!-- nav顶部菜单部分 -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-    <nav class="desktop_navbar">
-      <a href="#"><img class="desktop_navbar_logo_img" src="img/logo.png" alt="logo"></a>
-      <a href="/wiki.html" class="desktop_navbar_link">入门指南</a>
-      <a href="#qq" class="desktop_navbar_link scroll">社群</a>
-      <a href="#about" class="desktop_navbar_link scroll">管理组</a>
-      <div class="desktop_navbar_link2_div">
-          <a href="#join" class="desktop_navbar_link2 scroll">加入游戏</a>
-      </div>
-    </nav>
-
-    <nav class="mobile_navbar">
-      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="img/logo.png" alt="logo"></a>
-      <div id="mobile_navbar_links">
-          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="/wiki.html">入门指南</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#qq">社群</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">管理组</a>
-          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">加入游戏</a>
-        </div>
-        <div class="icon" onclick="mobile_navbar_link_hider()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <script>
-            function mobile_navbar_link_hider() {
-            var x = document.getElementById("mobile_navbar_links");
-            if (x.style.display === "flex") {
-                x.style.display = "none";
-            } else {
-                x.style.display = "flex";
-            }
-            } 
-        </script>
-    </nav>
-    <div class="mainflex">
-
-
-
-      <!-- 头图宣传语部分 -->
-
-      <div class="main1">
-        <a class="main1_logo_a" href="#">
-          <img class="main1_logo" src="img/logoText.png" alt="logo">
-        </a>
-        <div class="main1_description">
-          <a>国内最大的</a><a class="main1_actcent">公益VR服务器</a><a>。</a>
-        </div>
-        <div class="main1_ipcopier_div">
-          <button class="main1_ipcopier" onclick="copyText()" type="button">
-            <span class="main1_ipcopier_text1">naturecraft.cn</span>
-            <br>
-            <span class="main1_ipcopier_text2">点击复制</span>
-          </button>
-          <script>
-            function copyText() {
-                navigator.clipboard.writeText
-            ("naturecraft.cn");
-                }
-            $(document).ready(function() {
-            $('.main1_ipcopier').click(function() {
-                var popup = $('<div>', { class: 'main1_popup' })
-                .append($('<h4>').text('已复制到剪贴板'))
-                $(this).after(popup);
-                setTimeout(function() {
-                popup.remove();
-                }, 1000);
-            });
-            });
-        </script>
-        </div>
-        <a href="#more" class="scroll">
-          <img alt="downarrow" class="main1_downarrow" src="img/downarrow.png">
-        </a>
-        <script>
-          const scrollLinks = document.querySelectorAll('.scroll');
-          scrollLinks.forEach(function(link) {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
-              const target = document.querySelector(link.getAttribute('href'));
-              const offsetTop = target.offsetTop;
-              window.scrollTo({
-                top: offsetTop,
-                behavior: 'smooth'
-              });
-            });
-          });
-        </script>
-      </div>
-
-
-
-      <!-- 特色玩法与机制 -->
-
-      <div id="more"></div>
-      <div class="main2">
-        <a class="headline">特色玩法与机制</a>
-        <div class="main2_features_div">
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="img/placeholder.png">
-            <a class="main2_feature_headline">Feature 1</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="img/placeholder.png">
-            <a class="main2_feature_headline">Feature 2</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="img/placeholder.png">
-            <a class="main2_feature_headline">Feature 3</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="img/placeholder.png">
-            <a class="main2_feature_headline">Feature 4</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="img/placeholder.png">
-            <a class="main2_feature_headline">Feature 5</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-          <div class="main2_feature">
-            <img class="main2_feature_img" alt="Feature Image" src="img/placeholder.png">
-            <a class="main2_feature_headline">Feature 6</a>
-            <a class="main2_feature_text">Feature description</a>
-          </div>
-        </div>
-      </div>
-      <div id="qq"></div>
-      <div class="main4">
-        <a class="headline">加入我们的社群</a>
-        <div class="main4_dc_div">
-          <img src="img/qq.jpg" alt="QQ" class="main4_dc_widget_img">
-          <div class="main4_dc_description_div">
-            <a class="main4_dc_description_title">QQ交流群</a>
-            <a class="main4_dc_description"> ・玩家交流 <br> ・申请白名单 <br> ・获取更新  <br> ・反馈建议  <br></a>
-            <a href="https://qq.gg/INVITE" class="main4_dc_button_a">
-              <div class="main4_dc_button">加入</div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-
-      <!-- 管理组介绍 -->
-       
-      <div id="about"></div>
-      <div class="main5">
-        <a class="headline">管理组成员</a>
-        <div class="main5_admin_div">
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="img/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[服主]</a>
-              <a class="main5_admins_description_title" href="https://example.com">finkkk飞飞</a>
-              <a class="main5_admins_description">腐竹<br>description</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type1">
-            <img class="main5_admins_img" alt="admin member img" src="img/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[策划部]</a>
-              <a class="main5_admins_description_title" href="https://example.com">黑泽优</a>
-              <a class="main5_admins_description">管理组核心成员<br>description</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type2">
-            <img class="main5_admins_img" alt="admin member img" src="img/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[后勤部]</a>
-              <a class="main5_admins_description_title" href="https://example.com">童话</a>
-              <a class="main5_admins_description">管理组核心成员<br>description</a>
-            </div>
-          </div>
-          <div class="main5_admins_div main5_admins_dev_type1">
-            <img class="main5_admins_img" alt="admin member img" src="img/member_placeholder.webp">
-            <div class="main5_admins_description_div">
-              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[技术部]</a>
-              <a class="main5_admins_description_title" href="https://example.com">剩饭</a>
-              <a class="main5_admins_description">管理组核心成员<br>description</a>
-            </div>
-          </div>
-        </div>
-        <div class="main5_supporter_div">
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="img/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[特别鸣谢]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 1</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="img/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[特别鸣谢]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 2</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="img/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[特别鸣谢]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 3</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-          <div class="main5_supporters_div">
-            <img class="main5_supporters_img" alt="supporters member img" src="img/member_placeholder.webp">
-            <div class="main5_supporters_description_div">
-              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[特别鸣谢]</a>
-              <a class="main5_supporters_description_title">Replacable Supporter 4</a>
-              <a class="main5_supporters_description">Supporter<br>Description</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="join"></div>
-
-
-
-      <!--如何进入游戏 板块-->
-
-      <div class="main3">
-        <a class="headline">如何进入游戏？</a>
-        <div class="main3_join_div_div">
-          <div class="main3_join_div">
-            <a class="main3_join_title">第一步</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>下载客户端</a>
-              </div>
-              <div class="main3_join_values">
-                <a></a>
-                <a>百度网盘链接</a>
-                <a>123网盘链接</a>
-              </div>
-            </div>
-          </div>
-          <div class="main3_join_div">
-            <a class="main3_join_title">第二步</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>申请白名单</a>
-              </div>
-              <div class="main3_join_values">
-                <a>加入Q群</a>
-                <a>向管理组成员申请</a>
-              </div>
-            </div>
-          </div>
-          <div class="main3_join_div">
-            <a class="main3_join_title">第三步</a>
-            <div class="main3_join_content_div">
-              <div class="main3_join_categories">
-                <a>启动游戏</a>
-              </div>
-              <div class="main3_join_values">
-                <a></a>
-                <a>祝您游戏愉快</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
     </div>
-    <footer class="copyright_div">
-      <a href="https://github.com/finkkk/naturecraft.cn" class="copyright">Last Update: 2024.10.10 - Edited by finkkk 2024</a>
+    <nav class="navbar">
+        <div class="max-width">
+          <div class="logo"><a href="#home">Nature<span>Craft<an</a></div>
+            <ul class="menu">
+                <li><a href="#home" class="menu-btn">主页</a></li>
+                <li><a href="#about" class="menu-btn">About</a></li>
+                <li><a href="#services" class="menu-btn">Services</a></li>
+                <li><a href="#skills" class="menu-btn">Skills</a></li>
+                <li><a href="#teams" class="menu-btn">Teams</a></li>
+                <li><a href="#contact" class="menu-btn">Contact</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- home section start -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">欢迎来到 NatureCraft VR</div>
+                <div class="text-2">国内最大的VR服务器</div>
+                <a href="#contact">加入游戏</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title">About Us</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="images/img-about.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text">We Are Hosting Name And We Provide</div>
+                    <p>Hosting Name is A Startup That Provides Minecraft Server, Discord Bot that you can host for free or very low price!</p>
+                    <a href="mailto:support@hosting.com">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">Our Game Servers</h2>
+            <div class="serv-content">
+                <div class="card">
+                    <div class="box">
+                        <i class="fab fa-discord"></i>
+                        <div class="text">Discord Bot</div>
+                        <p>Host a discord bot with no downtime </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-map-pin"></i>
+                        <div class="text">Minecraft Servers</div>
+                        <p>Host a powerfull minecraft server with lagg free experience</p>
+                    </div>
+               </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section start -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">What We Provide</h2>
+            <div class="skills-content">
+                <div class="column left">
+                    <div class="text">We Provide.</div>
+                    <p>Lagg free experience</p>
+                        <p> No Dataloss</p> Premium Nodes
+                       <p> Fast support</p>
+                       <p>24/7 customer support</p>
+
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- teams section start -->
+    <section class="teams" id="teams">
+        <div class="max-width">
+            <h2 class="title">Our teams</h2>
+            <div class="carousel owl-carousel">
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-1.jpeg" alt="">
+                        <div class="text">Owner</div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-2.jpeg" alt="">
+                        <div class="text">Co-Owner</div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-3.jpeg" alt="">
+                        <div class="text">Developer</div>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/profile-4.jpeg" alt="">
+                        <div class="text">Manager</div>
+                        <p></p>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section start -->
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">Contact me</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">Get in Touch</div>
+                    <p>/</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Hosting Name</div>
+                                <div class="sub-title">Hosting</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">support@hosting.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer section start -->
+   <!-- footer section start -->
+    <footer>
+        <span> <a href="Hosting.com">Hosting Name</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
+        <footer>
+            <div class="container py-4">
+                <div class="copyright">
+                  <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- Licensing information: https://github.com/Fex-Development/Hosting-website-template/blob/main/LICENSE -->
+                    Designed by <a href="https://github.com/Fex-Development/">FexHub</a>
+                  </div>
+                </div>
+              </div>
+        </footer>
     </footer>
-  </body>
+
+    <script src="/scripts/script.js"></script>
+</body>
 </html>

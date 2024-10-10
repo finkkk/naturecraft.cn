@@ -210,7 +210,7 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
-    background: url("/naturecraft.cn/img/bg.png") no-repeat center;
+    background: url("/img/bg.png") no-repeat center;
     height: 100vh;
     color: #fff;
     min-height: 500px;
@@ -307,7 +307,7 @@ section .title::after{
 /* services section styling */
 .services, .teams{
     color:#fff;
-background-image: url(/naturecraft.cn/img/bg.png);
+background-image: url(/img/bg.png);
 }
 .services .title::before,
 .teams .title::before{

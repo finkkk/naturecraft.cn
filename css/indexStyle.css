@@ -27,7 +27,7 @@ html[data-theme='dark'] {
 html[data-theme='dark'] a {
     color: crimson;
 }
-.skills .skills-content .column.left .feature-box {
+.group .group-content .column.left .feature-box {
     padding: 20px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -37,19 +37,19 @@ html[data-theme='dark'] a {
     cursor: pointer; /* Add cursor pointer on hover */
 }
 
-.skills .skills-content .column.left .feature-box:hover {
+.group .group-content .column.left .feature-box:hover {
     background: #fff;
     border-color: #fff;
     color: crimson;
 }
 
 /* Colorful feature boxes */
-.skills .skills-content .column.left .feature-box:nth-child(odd) {
+.group .group-content .column.left .feature-box:nth-child(odd) {
     background: #FF6B6B; /* Red */
     color: #fff;
 }
 
-.skills .skills-content .column.left .feature-box:nth-child(even) {
+.group .group-content .column.left .feature-box:nth-child(even) {
     background: #74B9FF; /* Blue */
     color: #fff;
 }
@@ -79,12 +79,12 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .services, .skills, .teams, .contact, footer{
+.wiki, .gallery, .group, .download, .contact, footer{
     font-family: 'Poppins', sans-serif;
 }
-.about .about-content,
-.services .serv-content,
-.skills .skills-content,
+.wiki .wiki-content,
+.gallery .serv-content,
+.group .group-content,
 .contact .contact-content{
     display: flex;
     flex-wrap: wrap;
@@ -216,8 +216,12 @@ section .title::after{
 /* home section styling */
 .home{
     display: flex;
+    flex-direction: column; /* 垂直排列元素 */
+    align-items: center; /* 水平居中 */
+    justify-content: space-between; /* 元素之间平均分配空间 */
     background: url("/img/bg.png") no-repeat center;
     height: 100vh;
+    width: 100%;
     color: #fff;
     min-height: 500px;
     background-size: cover;
@@ -225,43 +229,49 @@ section .title::after{
     font-family: 'Ubuntu', sans-serif;
 }
 .home_logo_a {
-    cursor: default;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+    justify-content: center;
+}
+
+.home_description {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 68%;
+    justify-content: center;
+    text-align: center;
+    font-size:33px;
+    font-weight: 800;
+}
+
+.scroll{
+    display: flex;
+    position: absolute; /* 绝对定位 */
+    bottom: 10px; /* 距离视口底部 0 */
+    left: 0;
+    right: 0;
+    margin-top: 6%;
+    justify-content: center;
 }
 
 .home_logo {
-    display: flex;
-    align-self: center;
+    width: 50vw;
+    height: auto; /* 保持高度比例 */
+    object-fit: cover; /* 保持比例并覆盖整个容器 */
     transition: all .5s;
-    max-width: 300px;
 }
 .home_logo:hover {
     transform: scale(1.05)
 }
-
-.home_description {
-    text-align: center;
-    font-size:30px;
-}
-
 .home_actcent {
     font-weight: 800;
-    color:#111;
+    color:#ffffff;
 }
-
-.home_button {
-    padding: 12px;
-    padding-left: 22px;
-    padding-right: 22px;
-    font-size: 20px;
-    background-color: green;
-    border: 0px;
-    border-radius: 15px;
-    color: white;
-    transition: all .5s;
-    cursor:pointer;
-    position: relative;
-}
-
 .home_button:hover {
     background-color: rgb(64, 200, 44);
     transform: scale(1.1)
@@ -272,7 +282,6 @@ section .title::after{
     padding:10px;
     transition: all .5s;
 }
-
 .home_downarrow:hover {
     opacity: 100%;
     transform: scale(1.05)
@@ -280,34 +289,112 @@ section .title::after{
 
 
 
-/* about section styling */
-.about .title::after{
-    content: "who are we";
+/* feature section styling */
+.feature {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    padding-bottom: 10px;
+    background-color: #16191b;
+    width: 100%;
 }
-.about .about-content .left{
+
+.headline {
+    margin-top: -30px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.feature_features_div {
+    padding-top: 20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.feature_feature {
+    display: flex;
+    background-color: #212529;
+    height: 400px;
+    width: 300px;
+    margin: 30px;
+    border-radius: 20px;
+    transition: all .5s;
+    flex-direction: column;
+}
+
+.feature_feature:hover {
+    background-color: #00000099;
+    transform: scale(1.05)
+}
+
+@media (max-width: 1599px) {
+    .feature_features_div {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+@media (max-width: 1279px) {
+    .feature_features_div {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+
+.feature_feature_img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.feature_feature_headline {
+    margin-top: 1px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: auto;
+}
+
+.feature_feature_text {
+    margin:1px;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: auto;
+}
+
+
+
+/* wiki section styling */
+.wiki .wiki-content .left{
     width: 45%;
 }
-.about .about-content .left img{
+.wiki .wiki-content .left img{
     height: 400px;
     width: 400px;
     object-fit: cover;
     border-radius: 6px;
 }
-.about .about-content .right{
+.wiki .wiki-content .right{
     width: 55%;
 }
-.about .about-content .right .text{
+.wiki .wiki-content .right .text{
     font-size: 25px;
     font-weight: 600;
     margin-bottom: 10px;
 }
-.about .about-content .right .text span{
+.wiki .wiki-content .right .text span{
     color: crimson;
 }
-.about .about-content .right p{
+.wiki .wiki-content .right p{
     text-align: justify;
 }
-.about .about-content .right a{
+.wiki .wiki-content .right a{
     display: inline-block;
     background: crimson;
     color: #fff;
@@ -319,290 +406,156 @@ section .title::after{
     border: 2px solid crimson;
     transition: all 0.3s ease;
 }
-.about .about-content .right a:hover{
+.wiki .wiki-content .right a:hover{
     color: crimson;
     background: none;
 }
 
-/* services section styling */
-.services, .teams{
+/* gallery section styling */
+.gallery, .download{
     color:#fff;
 background-image: url("/img/bg.png");
 }
-.services .title::before,
-.teams .title::before{
+.gallery .title::before,
+.download .title::before{
     background: #fff;
 }
-.services .title::after,
-.teams .title::after{
+.gallery .title::after,
+.download .title::after{
     background: #111;
-    content: "what we provide";
-}
-.services .serv-content .card{
-    width: calc(103% - 20px);
-    background: #222;
-    text-align: center;
-    border-radius: 6px;
-    padding: 50px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover{
-    background: crimson;
-}
-.services .serv-content .card .box{
-    transition: all 0.3s ease;
-}
-.services .serv-content .card:hover .box{
-    transform: scale(1.05);
-}
-.services .serv-content .card i{
-    font-size: 50px;
-    color: crimson;
-    transition: color 0.3s ease;
-}
-.services .serv-content .card:hover i{
-    color: #fff;
-}
-.services .serv-content .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
+    content: "服务器风景展示";
 }
 
-/* skills section styling */
 
-.skills .title::after{
-    content: "what we know";
-}
-.skills .skills-content .column{
-    width: calc(50% - 30px);
-}
-.skills .skills-content .left .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.skills .skills-content .left p{
-    text-align: justify;
-}
-.skills .skills-content .left a{
-    display: inline-block;
-    background: crimson;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 8px 16px;
-    margin-top: 20px;
-    border-radius: 6px;
-    border: 2px solid crimson;
-    transition: all 0.3s ease;
-}
-.skills .skills-content .left a:hover{
-    color: crimson;
-    background: none;
-}
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
+
+
+
+
+
+
+/* group section styling */
+
+.group {
+    min-height: 10px;
+    width:100%;
     display: flex;
-    margin-bottom: 5px;
-    align-items: center;
-    justify-content: space-between;
-}
-.skills .skills-content .right span{
-    font-weight: 500;
-    font-size: 18px;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: crimson;
-}
-.skills-content .right .html::before{
-    width: 90%;
-}
-.skills-content .right .css::before{
-    width: 60%;
-}
-.skills-content .right .js::before{
-    width: 80%;
-}
-.skills-content .right .php::before{
-    width: 50%;
-}
-.skills-content .right .mysql::before{
-    width: 70%;
-}
-
-/* teams section styling */
-.teams .title::after{
-    content: "who with me";
-}
-.teams .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover{
-    background: crimson;
-}
-.teams .carousel .card .box{
-    display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.teams .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.teams .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid crimson;
-    transition: all 0.3s ease;
-}
-.teams .carousel .card:hover img{
-    border-color: #fff;
-}
-.owl-dots{
-    text-align: center;
-    margin-top: 20px;
-}
-.owl-dot{
-    height: 13px;
-    width: 13px;
-    margin: 0 5px;
-    outline: none!important;
-    border-radius: 50%;
-    border: 2px solid crimson!important;
-    transition: all 0.3s ease;
-}
-.owl-dot.active{
-    width: 35px;
-    border-radius: 14px;
-}
-.owl-dot.active,
-.owl-dot:hover{
-    background: crimson!important;
 }
 
-/* contact section styling */
-.contact .title::after{
-    content: "get in touch";
+.group_qq_widget {
+    border-radius: 20px;
+    border: 0;
 }
-.contact .contact-content .column{
-    width: calc(50% - 30px);
-}
-.contact .contact-content .text{
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-.contact .contact-content .left p{
-    text-align: justify;
-}
-.contact .contact-content .left .icons{
-    margin: 10px 0;
-}
-.contact .contact-content .row{
+
+.group_qq_div {
+    margin-top: 2%;
+    margin-bottom: 1%;
+    margin-right: 18%;
+    margin-left: 18%;
     display: flex;
-    height: 65px;
-    align-items: center;
+    flex-direction: row;
+    background-color: rgb(34, 34, 34);
+    border-radius: 20px;
 }
-.contact .contact-content .row .info{
-    margin-left: 30px;
-}
-.contact .contact-content .row i{
-    font-size: 25px;
-    color: crimson;
-}
-.contact .contact-content .info .head{
-    font-weight: 500;
-}
-.contact .contact-content .info .sub-title{
-    color: #333;
-}
-.contact .right form .fields{
+
+.group_qq_description_div {
     display: flex;
+    flex-direction: column;
 }
-.contact .right form .field,
-.contact .right form .fields .field{
-    height: 45px;
-    width: 100%;
-    margin-bottom: 15px;
-}
-.contact .right form .textarea{
-    height: 80px;
-    width: 100%;
-}
-.contact .right form .name{
+
+
+.group_qq_description {
+    margin-top: 20px;
+    margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
 }
-.contact .right form .field input,
-.contact .right form .textarea textarea{
+.group_qq_button_a{
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    border: solid #f0630c 1px;
+    border-radius: 20px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    transition: all .5s;
+}
+.group_qq_button_a:hover{
+    border: solid 1px #ff8c00;
+    background-color: #f0630c;
+    transform: scale(1.05)
+}
+.group_qq_button {
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+/* download section styling */
+.download .title::after{
+    content: "游戏客户端下载";
+}
+
+
+.download {
+    min-height: 10px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    border-radius: 20px;
+}
+
+.download_join_div_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    margin: 10px;
+}
+
+.download_join_div {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.download_join_title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: all .5s;
+    margin-bottom: .5rem;
+}
+
+.download_join_content {
+    display: flex;
+    flex-direction: row;
     height: 100%;
-    width: 100%;
-    border: 1px solid lightgrey;
-    border-radius: 6px;
-    outline: none;
-    padding: 0 15px;
-    font-size: 17px;
-    font-family: 'Poppins', sans-serif;
-    transition: all 0.3s ease;
+    border-radius: 20px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
 }
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus{
-    border-color: #b3b3b3;
-}
-.contact .right form .textarea textarea{
-  padding-top: 10px;
-  resize: none;
-}
-.contact .right form .button-area{
-  display: flex;
-  align-items: center;
-}
-.right form .button-area button{
-  color: #fff;
-  display: block;
-  width: 160px!important;
-  height: 45px;
-  outline: none;
-  font-size: 18px;
-  font-weight: 500;
-  border-radius: 6px;
-  cursor: pointer;
-  flex-wrap: nowrap;
-  background: crimson;
-  border: 2px solid crimson;
-  transition: all 0.3s ease;
-}
-.right form .button-area button:hover{
-  color: crimson;
-  background: none;
-}
+
+
+
+
 /* footer section styling */
 footer{
     background: #111;
@@ -619,20 +572,55 @@ footer span a:hover{
 }
 
 
+
+
+
+
+
 /* responsive media query start */
 @media (max-width: 1104px) {
-    .about .about-content .left img{
+    .home_logo {
+        width: 60vw;
+    }
+    .home_description {
+        top: 68%;
+    }
+    .wiki .wiki-content .left img{
         height: 350px;
         width: 350px;
+    }
+    .group_qq_div {
+        flex-direction: column;
+    }
+    .group_qq_widget {
+        height: auto;
+        width: 100%;
+        object-fit: contain;
     }
 }
 
 @media (max-width: 991px) {
+    .home_logo {
+        width: 60vw;
+    }
+    .home_description {
+        top: 68%;
+    }
     .max-width{
         padding: 0 50px;
     }
+    .group_qq_div {
+        flex-direction: column;
+    }
 }
+
 @media (max-width: 947px){
+    .home_logo {
+        width: 60vw;
+    }
+    .home_description {
+        top: 65%;
+    }
     .menu-btn{
         display: block;
         z-index: 999;
@@ -662,42 +650,43 @@ footer span a:hover{
         margin: 20px 0;
         font-size: 25px;
     }
-    .home .home-content .text-2{
-        font-size: 50px;
-    }
-    .home .home-content .text-3{
-        font-size: 28px;
-    }
-    .home .home-content a{
-        font-size: 23px;
-        padding: 10px 30px;
-    }
     .max-width{
         max-width: 930px;
     }
-    .about .about-content .column{
+    .wiki .wiki-content .column{
         width: 100%;
     }
-    .about .about-content .left{
+    .wiki .wiki-content .left{
         display: flex;
         justify-content: center;
         margin: 0 auto 60px;
     }
-    .about .about-content .right{
+    .wiki .wiki-content .right{
         flex: 100%;
     }
-    .services .serv-content .card{
+    .gallery .serv-content .card{
         width: calc(50% - 10px);
         margin-bottom: 20px;
     }
-    .skills .skills-content .column,
-    .contact .contact-content .column{
-        width: 100%;
-        margin-bottom: 35px;
+}
+
+@media (max-width: 800px){
+    .home_logo {
+        width: 60vw;
+    }
+    .home_description {
+        top: 60%;
     }
 }
 
 @media (max-width: 690px) {
+    .home_logo {
+        width: 65vw;
+    }
+    .home_description {
+        top: 60%;
+        font-size:30px;
+    }
     .max-width{
         padding: 0 23px;
     }
@@ -710,20 +699,27 @@ footer span a:hover{
     .home .home-content a{
         font-size: 20px;
     }
-    .services .serv-content .card{
+    .gallery .serv-content .card{
         width: 100%;
     }
 }
 
 @media (max-width: 500px) {
+    .home_logo {
+        width: 80vw;
+    }
+    .home_description {
+        top: 65%;
+        font-size:25px;
+    }
     .home .home-content .text-2{
         font-size: 30px;
     }
     .home .home-content .text-3{
         font-size: 18px;
     }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
+    .wiki .wiki-content .right .text,
+    .group .group-content .left .text{
         font-size: 19px;
     }
     .contact .right form .fields{

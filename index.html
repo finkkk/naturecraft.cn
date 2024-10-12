@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>欢迎来到 NatureCraft1</title>
+  <title>欢迎来到 NatureCraft</title>
+    <link rel="icon" href="/img/logoIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/indexStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -21,11 +22,11 @@
           <div class="logo"><a href="#home"><img src="/img/logo.png" alt=""></a><a href="#home">Nature<span>Craft<an</a></div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">主页</a></li>
-                <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#teams" class="menu-btn">Teams</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <li><a href="/wiki.html" class="menu-btn">新手指南</a></li>
+                <li><a href="#feature" class="menu-btn">特色玩法</a></li>
+                <li><a href="#gallery" class="menu-btn">风景画廊</a></li>
+                <li><a href="#group" class="menu-btn">加入社群</a></li>
+                <li><a href="#download" class="menu-btn">下载游戏</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -36,164 +37,140 @@
     <!-- home section start -->
     <section class="home" id="home">
         <div>
-            <a class="home_logo_a" href="#home">
-              <img class="home_logo" src="img/logoText.png" alt="logo">
+            <a class="home_logo_a" href="#wiki">
+              <img class="home_logo" src="img/MCVR.png" alt="logo">
             </a>
             <div class="home_description">
-              <a style="color: aliceblue;">欢迎来到NatureCraft<br></a>
-              <a class="home_actcent">国内最大的</a><a style="color: aliceblue;">公益VR服务器</a>
+              <a style="color: yellowgreen;">欢迎来到NatureCraft<br></a>
+              <a class="home_actcent">国内最大的</a><a style="color: rgb(255, 204, 0);">公益VR服务器</a>
             </div>
-            <div class="home_button_div">
-              <button class="home_button" onclick="location.href='#about';" type="button">
-                <span class="home_button_text1">加入游戏</span>
-              </button>
-            </div>
-            <a href="#about" class="scroll">
+            <a href="#wiki" class="scroll">
                 <img alt="downarrow" class="home_downarrow" src="img/downarrow.png">
               </a>
     </section>
 
-    <!-- about section start -->
-    <section class="about" id="about">
+
+
+    <!-- wiki section start -->
+    <section class="wiki" id="wiki">
         <div class="max-width">
-            <h2 class="title">关于我们</h2>
-            <div class="about-content">
+            <h2 class="title">新手指南</h2>
+            <div class="wiki-content">
                 <div class="column left">
-                    <img src="images/img-about.jpg" alt="">
+                    <img src="img/book.webp" alt="">
                 </div>
                 <div class="column right">
-                    <div class="text">We Are Hosting Name And We Provide</div>
-                    <p>Hosting Name is A Startup That Provides Minecraft Server, Discord Bot that you can host for free or very low price!</p>
-                    <a href="mailto:support@hosting.com">Get In Touch</a>
+                    <div class="text">这是为您提供的新手指南</div>
+                    <p>指南旨在帮助有意进入自然世界冒险的新人冒险者。他可以帮助您在Naturecraft中更好的生存下去，并打造属于自己的温馨家园！请各位冒险者仔细阅读！</p>
+                    <a href="/wiki.html">进入指南</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- services section start -->
-    <section class="services" id="services">
+
+
+    <!-- feature section start -->
+    <section class="feature" id="feature">
+        <a class="headline">服务器特色玩法</a>
+            <div class="feature_features_div">
+              <div class="feature_feature">
+                <img class="feature_feature_img" alt="Feature Image" src="img/placeholder.png">
+                <a class="feature_feature_headline">特色 1</a>
+                <a class="feature_feature_text">施工中...</a>
+              </div>
+              <div class="feature_feature">
+                <img class="feature_feature_img" alt="Feature Image" src="img/placeholder.png">
+                <a class="feature_feature_headline">特色 2</a>
+                <a class="feature_feature_text">施工中...</a>
+              </div>
+              <div class="feature_feature">
+                <img class="feature_feature_img" alt="Feature Image" src="img/placeholder.png">
+                <a class="feature_feature_headline">特色 3</a>
+                <a class="feature_feature_text">施工中...</a>
+              </div>
+              <div class="feature_feature">
+                <img class="feature_feature_img" alt="Feature Image" src="img/placeholder.png">
+                <a class="feature_feature_headline">特色 4</a>
+                <a class="feature_feature_text">施工中...</a>
+              </div>
+              <div class="feature_feature">
+                <img class="feature_feature_img" alt="Feature Image" src="img/placeholder.png">
+                <a class="feature_feature_headline">特色 5</a>
+                <a class="feature_feature_text">施工中...</a>
+              </div>
+              <div class="feature_feature">
+                <img class="feature_feature_img" alt="Feature Image" src="img/placeholder.png">
+                <a class="feature_feature_headline">特色 6</a>
+                <a class="feature_feature_text">施工中...</a>
+              </div>
+            </div>
+    </section>
+
+    <!-- gallery section start -->
+    <section class="gallery" id="gallery">
         <div class="max-width">
-            <h2 class="title">Our Game Servers</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fab fa-discord"></i>
-                        <div class="text">Discord Bot</div>
-                        <p>Host a discord bot with no downtime </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-map-pin"></i>
-                        <div class="text">Minecraft Servers</div>
-                        <p>Host a powerfull minecraft server with lagg free experience</p>
-                    </div>
-               </div>
-
-            </div>
+            <h2 class="title">风景画廊</h2>
+            
         </div>
     </section>
 
-    <!-- skills section start -->
-    <section class="skills" id="skills">
+    <!-- group section start -->
+    <section id="group">
+        <div class="group">
+          <a class="headline">加入社群</a>
+          <div class="group_qq_div">
+            <img class="group_qq_widget" src="/img/qq.png" width="400" height="400" ></img>
+            <div class="group_qq_description_div">
+              <a class="group_qq_description"> ・  玩家交流 <br><br> ・  提问问题 <br><br> ・  获取更新 <br><br> ・ 反馈建议  <br><br> ・ Q群号：917885964</a>
+              <a href="https://qm.qq.com/q/zFVbRFjJfi" class="group_qq_button_a">
+                <div class="group_qq_button">加入社群</div>
+              </a>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- download section start -->
+    <section class="download" id="download">
         <div class="max-width">
-            <h2 class="title">What We Provide</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">We Provide.</div>
-                    <p>Lagg free experience</p>
-                        <p> No Dataloss</p> Premium Nodes
-                       <p> Fast support</p>
-                       <p>24/7 customer support</p>
-
+            <h2 class="title">下载游戏</h2>
+            <div class="download">
+                <div class="download_join_div_div">
+                  <div class="download_join_div">
+                    <a class="download_join_title">百度网盘</a>
+                    <div class="download_join_content">
+                        <a>点击下载</a>
+                    </div>
+                  </div>
+                  <div class="download_join_div">
+                    <a class="download_join_title">123网盘</a>
+                    <div class="download_join_content">
+                        <a href="">点击下载</a>
+                    </div>
+                  </div>
+                  <div class="download_join_div">
+                    <a class="download_join_title">Q群文件</a>
+                    <div class="download_join_content">
+                        <a href="https://qm.qq.com/q/zFVbRFjJfi">点击入群</a>
+                    </div>
+                  </div>
                 </div>
-
-                </div>
-            </div>
+              </div>
         </div>
     </section>
 
-    <!-- teams section start -->
-    <section class="teams" id="teams">
-        <div class="max-width">
-            <h2 class="title">Our teams</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-1.jpeg" alt="">
-                        <div class="text">Owner</div>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-2.jpeg" alt="">
-                        <div class="text">Co-Owner</div>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-3.jpeg" alt="">
-                        <div class="text">Developer</div>
-                        <p></p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-4.jpeg" alt="">
-                        <div class="text">Manager</div>
-                        <p></p>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- contact section start -->
-    <section class="contact" id="contact">
-        <div class="max-width">
-            <h2 class="title">Contact me</h2>
-            <div class="contact-content">
-                <div class="column left">
-                    <div class="text">Get in Touch</div>
-                    <p>/</p>
-                    <div class="icons">
-                        <div class="row">
-                            <i class="fas fa-user"></i>
-                            <div class="info">
-                                <div class="head">Hosting Name</div>
-                                <div class="sub-title">Hosting</div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <div class="head">Email</div>
-                                <div class="sub-title">support@hosting.com</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- footer section start -->
    <!-- footer section start -->
     <footer>
-        <span> <a href="Hosting.com">Hosting Name</a> | <span class="far fa-copyright"></span> 2022 All rights reserved.</span>
+        <span> <a href="/index.html">Naturecraft</a> |  Last Update: 2024.10.12</span>
         <footer>
             <div class="container py-4">
                 <div class="copyright">
                   <div class="credits">
-                    <!-- All the links in the footer should remain intact. -->
-                    <!-- Licensing information: https://github.com/Fex-Development/Hosting-website-template/blob/main/LICENSE -->
-                    Designed by <a href="https://github.com/Fex-Development/">FexHub</a>
+                    Created by <a href="https://github.com/finkkk/naturecraft.cn">Finkkk</a>
                   </div>
                 </div>
               </div>

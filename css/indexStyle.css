@@ -147,7 +147,7 @@ section .title::after{
 .navbar .logo img{
     color: #fff;
     max-width: 40px;
-    margin-bottom: -8px;
+    margin-bottom: 5px;
     margin-right: 20px;
     
 }
@@ -219,7 +219,7 @@ section .title::after{
     flex-direction: column; /* 垂直排列元素 */
     align-items: center; /* 水平居中 */
     justify-content: space-between; /* 元素之间平均分配空间 */
-    background: url("/img/bg.png") no-repeat center;
+    background: url("/img/bg.webp") no-repeat center;
     height: 100vh;
     width: 100%;
     color: #fff;
@@ -279,6 +279,7 @@ section .title::after{
 .home_downarrow {
     opacity: 50%;
     height: 40px;
+    width: auto;
     padding:10px;
     transition: all .5s;
 }
@@ -362,7 +363,7 @@ section .title::after{
 }
 
 .feature_feature_text {
-    margin:1px;
+    margin:18px;
     text-align: center;
     font-size: 20px;
     margin-bottom: auto;
@@ -414,7 +415,7 @@ section .title::after{
 /* gallery section styling */
 .gallery, .download{
     color:#fff;
-background-image: url("/img/bg.png");
+background-image: url("/img/bg.webp");
 }
 .gallery .title::before,
 .download .title::before{
@@ -425,9 +426,61 @@ background-image: url("/img/bg.png");
     background: #111;
     content: "服务器风景展示";
 }
-
-
-
+.slideshow {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .slide {
+    min-width: 100%;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+  
+  /* 左右箭头样式 */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 50%;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
 
 
@@ -445,6 +498,8 @@ background-image: url("/img/bg.png");
 }
 
 .group_qq_widget {
+    width: 50%;
+    height: auto;
     border-radius: 20px;
     border: 0;
 }
@@ -468,7 +523,7 @@ background-image: url("/img/bg.png");
 
 .group_qq_description {
     margin-top: 20px;
-    margin-left: 10px;
+    margin-left: 70px;
     margin-right: 10px;
     margin-bottom: 30px;
     font-size: 20px;
@@ -481,7 +536,7 @@ background-image: url("/img/bg.png");
     border: solid #f0630c 1px;
     border-radius: 20px;
     margin-top: auto;
-    margin-left: auto;
+    margin-left: 150px;
     margin-right: auto;
     margin-bottom: 1.5rem;
     transition: all .5s;
@@ -509,10 +564,10 @@ background-image: url("/img/bg.png");
 .download {
     min-height: 10px;
     width:100%;
+    border-radius: 20px;
     display: flex;
     justify-content: center;
     flex-direction:column;
-    border-radius: 20px;
 }
 
 .download_join_div_div {
@@ -596,6 +651,12 @@ footer span a:hover{
         height: auto;
         width: 100%;
         object-fit: contain;
+    }
+    .group_qq_description {
+        margin-left: 10px;
+    }
+    .group_qq_button_a{
+        margin-left: auto;
     }
 }
 

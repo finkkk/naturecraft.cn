@@ -152,7 +152,7 @@ section .title::after{
     
 }
 .navbar .logo a span{
-    color: yellowgreen;
+    color: rgb(63,151, 37);
     transition: all 0.3s ease;
 }
 .navbar.sticky .logo a span{
@@ -251,8 +251,8 @@ section .title::after{
 
 .scroll{
     display: flex;
-    position: absolute; /* 绝对定位 */
-    bottom: 10px; /* 距离视口底部 0 */
+    position: absolute;
+    bottom: 10px; 
     left: 0;
     right: 0;
     margin-top: 6%;
@@ -261,8 +261,8 @@ section .title::after{
 
 .home_logo {
     width: 50vw;
-    height: auto; /* 保持高度比例 */
-    object-fit: cover; /* 保持比例并覆盖整个容器 */
+    height: auto;
+    object-fit: cover;
     transition: all .5s;
 }
 .home_logo:hover {
@@ -415,7 +415,10 @@ section .title::after{
 /* gallery section styling */
 .gallery, .download{
     color:#fff;
-background-image: url("/img/bg.webp");
+    background-image: url("/img/bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .gallery .title::before,
 .download .title::before{

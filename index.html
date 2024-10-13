@@ -47,26 +47,44 @@
             </div>
         </nav>
 
-        <!-- home section start -->
-        <section class="home" id="home">
-            <div>
-                <a class="home_logo_a" href="#wiki">
-                    <img class="home_logo" src="img/MCVR.png" alt="logo" />
-                </a>
-                <div class="home_description">
-                    <a style="color: yellowgreen">欢迎来到NatureCraft<br /></a>
-                    <a class="home_actcent">国内最大的</a
-                    ><a style="color: rgb(255, 204, 0)">公益VR服务器</a>
-                </div>
-                <a href="#wiki" class="scroll">
-                    <img
-                        alt="downarrow"
-                        class="home_downarrow"
-                        src="img/downarrow.png"
-                    />
-                </a>
-            </div>
-        </section>
+<!-- home section start -->
+<section class="home" id="home">
+    <div>
+        <a class="home_logo_a" href="#wiki">
+            <img class="home_logo" src="img/MCVR.png" alt="logo" />
+        </a>
+        <div class="home_description">
+            <!-- 在线人数显示部分，将通过 JavaScript 动态更新 -->
+            <a id="player-count" style="color: yellowgreen">在线人数：加载中...</a><br />
+            <a class="home_actcent">国内最大的</a><a style="color: rgb(255, 204, 0)">公益VR服务器</a>
+        </div>
+        <a href="#wiki" class="scroll">
+            <img
+                alt="downarrow"
+                class="home_downarrow"
+                src="img/downarrow.png"
+            />
+        </a>
+    </div>
+</section>
+
+<!-- 添加 mcapi.js 库 -->
+<script src="https://mcapi.us/scripts/minecraft.min.js"></script>
+<script>
+    // 调用 Minecraft API 获取服务器在线人数
+    MinecraftAPI.getServerStatus('naturecraft.cn', {
+        port: 25565 // 如果不是默认端口，请设置正确的端口号
+    }, function (err, status) {
+        var playerCountElement = document.getElementById('player-count');
+        if (err || !status.online) {
+            // 如果出错或服务器不在线
+            playerCountElement.innerHTML = '服务器离线';
+        } else {
+            // 显示在线玩家数
+            playerCountElement.innerHTML = `在线人数：${status.players.now}/${status.players.max}`;
+        }
+    });
+</script>
 
         <!-- wiki section start -->
         <section class="wiki" id="wiki">

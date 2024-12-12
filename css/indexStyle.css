@@ -560,7 +560,7 @@ section .title::after{
 
 /* download section styling */
 .download .title::after{
-    content: "游戏客户端下载";
+    content: "当前版本v1.7";
 }
 
 

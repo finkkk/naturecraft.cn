@@ -311,6 +311,28 @@
             </footer>
         </footer>
 
+        <div id="comments">
+        </div>
+<script>
+    fetch('./functions/handleWebhook/comments.json')
+        .then((res) => res.json())
+        .then((comments) => {
+            const container = document.getElementById('comments');
+            comments.forEach((comment) => {
+                const div = document.createElement('div');
+                div.innerHTML = `
+                    <p><strong>ID:</strong> ${comment.id}</p>
+                    <p><strong>时间:</strong> ${new Date(comment.timestamp).toLocaleString()}</p>
+                    <p><strong>内容:</strong> ${comment.message}</p>
+                    <p><strong>点赞:</strong> ${comment.like}</p>
+                    <hr>
+                `;
+                container.appendChild(div);
+            });
+        });
+</script>
+
+
         <script src="/scripts/script.js"></script>
         <script>
             const slides = document.querySelector('.slides')

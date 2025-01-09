@@ -314,7 +314,7 @@
         <div id="comments">
         </div>
 <script>
-    fetch('./functions/handleWebhook/comments.json')
+    fetch('/netlify/functions/handleWebhook/comments.json')
         .then((res) => res.json())
         .then((comments) => {
             const container = document.getElementById('comments');

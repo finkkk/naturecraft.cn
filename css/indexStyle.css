@@ -560,7 +560,7 @@ section .title::after{
 
 /* download section styling */
 .download .title::after{
-    content: "当前版本v1.9.8";
+    content: "当前版本v1.9.8fix";
 }
 
 
